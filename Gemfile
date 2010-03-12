@@ -19,6 +19,7 @@ gem "sqlite3-ruby", :require => "sqlite3"
 gem 'warden'
 gem 'devise'
 gem 'haml'
+gem 'ruby-debug'
 
 ## Bundle gems used only in certain environments:
 # gem "rspec", :group => :test
