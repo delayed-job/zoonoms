@@ -1,2 +1,11 @@
 %html
   %h1 ZooNoms!
+  - if user_signed_in?
+    %p
+      Welcome Back 
+      =current_user.email
+  - else
+    %p
+      %a{:href => new_user_session_path} Sign In
+      |
+      %a{:href => new_user_registration_path} Sign Up
