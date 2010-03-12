@@ -17,7 +17,7 @@ gem "sqlite3-ruby", :require => "sqlite3"
 # gem "sqlite3-ruby", :require => "sqlite3"
 # gem "aws-s3", :require => "aws/s3"
 gem 'warden'
-gem 'devise'
+gem 'devise', "1.1.pre"
 gem 'haml'
 gem 'ruby-debug'
 
