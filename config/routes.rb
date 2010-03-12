@@ -1,4 +1,6 @@
 Zoonoms::Application.routes.draw do |map|
+  resources :noms
+
   resources :animals
 
   devise_for :users
