@@ -1,4 +1,8 @@
 Zoonoms::Application.routes.draw do |map|
+  resources :animals
+
+  devise_for :users
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
