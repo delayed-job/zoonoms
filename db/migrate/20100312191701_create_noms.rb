@@ -1,8 +1,8 @@
 class CreateNoms < ActiveRecord::Migration
   def self.up
     create_table :noms do |t|
-      t.reference :animal
-      t.reference :user
+      t.references :animal
+      t.references :user
 
       t.timestamps
     end

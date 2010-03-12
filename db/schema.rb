@@ -18,6 +18,8 @@ ActiveRecord::Schema.define(:version => 20100312191701) do
   end
 
   create_table "noms", :force => true do |t|
+    t.integer  "animal_id"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
