@@ -1,0 +1,9 @@
+- form_for(@animal) do |f|
+  = f.error_messages
+
+  .field
+    = f.label :name
+    %br /
+    = f.text_field :name
+  .actions
+    = f.submit

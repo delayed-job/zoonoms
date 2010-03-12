@@ -1,0 +1,22 @@
+%h1 Listing noms
+
+%table
+  %tr
+    %th Animal
+    %th User
+    %th
+    %th
+    %th
+  %tr
+
+- @noms.each do |nom|
+  %tr
+    %td= nom.animal
+    %td= nom.user
+    %td= link_to 'Show', nom
+    %td= link_to 'Edit', edit_nom_path(nom) 
+    %td= link_to 'Destroy', nom, :confirm => 'Are you sure?', :method => :delete
+  %tr
+%br /
+
+= link_to 'New nom', new_nom_path
