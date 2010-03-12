@@ -40,9 +40,9 @@ class NomsController < ApplicationController
   # POST /noms
   # POST /noms.xml
   def create
-    params[:nom][:animal] = Animal.find(params[:nom][:animal])
     @nom = Nom.new(params[:nom])
-    @nom.user = current_user
+    @nom.user_id = current_user.id
+    @nom.animal_id = params[:nom][:animal_id]
 
     respond_to do |format|
       if @nom.save
