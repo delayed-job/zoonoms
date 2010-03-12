@@ -4,6 +4,8 @@
     %p
       Welcome Back 
       =current_user.email
+    %p
+      %a{:href => destroy_user_session_path} Log Out
   - else
     %p
       %a{:href => new_user_session_path} Sign In
