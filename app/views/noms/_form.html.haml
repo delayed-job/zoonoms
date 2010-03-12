@@ -1,0 +1,7 @@
+- form_for(@nom) do |f|
+  = f.error_messages
+  .field
+    = f.label :animal
+    = f.select :animal, Animal.all.collect {|a| [a.name, a.id] }
+  .actions
+    = f.submit

@@ -1,0 +1,10 @@
+%p
+  %b Animal: 
+  = @nom.animal
+%p
+  %b User: 
+  = @nom.user
+
+= link_to 'Edit', edit_nom_path(@nom)
+|
+= link_to 'Back', noms_path
