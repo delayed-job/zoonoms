@@ -19,7 +19,9 @@ gem "sqlite3-ruby", :require => "sqlite3"
 gem 'warden'
 gem 'devise', "1.1.pre"
 gem 'haml'
-gem 'ruby-debug'
+group :development do
+  gem 'ruby-debug'
+end
 
 group :production do
   gem 'pg'
