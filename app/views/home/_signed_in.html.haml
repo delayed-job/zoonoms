@@ -1,8 +1,7 @@
 - content_for :top_bar do
   %a.prefix_8.grid_2{:href => destroy_user_session_path}Log Out
 
-.prefix_3.grid_6.suffix_3
-  = render 'noms/form'
+= render 'noms/form'
 
-  %h2 Recent Noms
-  = render :partial => 'noms/nom', :collection => @noms
+%h2 Recent Noms
+= render :partial => 'noms/nom', :collection => @noms
