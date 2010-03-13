@@ -3,10 +3,6 @@ class Nom < ActiveRecord::Base
   belongs_to :user
 
   def animal
-    Animal.find(animal_id).name
-  end
-
-  def user
-    User.find(user_id).email
+    Animal.find(animal_id)
   end
 end
