@@ -24,11 +24,6 @@ group :development do
   gem "sqlite3-ruby", :require => "sqlite3"
 end
 
-group :production do
-  gem 'pg'
-  gem 'thin'
-end
-
 ## Bundle gems used only in certain environments:
 # gem "rspec", :group => :test
 # group :test do
