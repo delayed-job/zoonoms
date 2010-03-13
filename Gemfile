@@ -21,6 +21,10 @@ gem 'devise', "1.1.pre"
 gem 'haml'
 gem 'ruby-debug'
 
+group :production do
+  gem 'pg'
+end
+
 ## Bundle gems used only in certain environments:
 # gem "rspec", :group => :test
 # group :test do
