@@ -1,0 +1,19 @@
+body {
+  background: #f2f2f2;
+  color: #AECDCA;
+  font-size: 1.1em;
+}
+h1 {
+  color: #611F0D;
+  font-size: 90px;
+}
+
+a {
+  color: #5C94C4;
+  text-decoration: none;
+}
+a:hover {
+  color: #FF8103;
+  text-decoration: underline;
+}
+
