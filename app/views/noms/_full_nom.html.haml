@@ -1,5 +1,5 @@
 %p
-  = full_nom.user.username
+  = link_to full_nom.user.username, user_page_via_username_path(full_nom.user.username)
   nom'd a 
   = full_nom.animal.name
   = time_ago_in_words(full_nom.created_at)
