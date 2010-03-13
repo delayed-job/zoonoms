@@ -1,4 +1,8 @@
 - content_for :title, "#{@user.username}'s ZooNoms"
 
+%h1
+  = "#{@user.username}'s"
+  Recent Noms
+
 = render :partial => 'nom', :collection => @noms.all
 
