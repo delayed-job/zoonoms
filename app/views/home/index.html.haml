@@ -6,6 +6,8 @@
       =current_user.username
     %p
       %a{:href => destroy_user_session_path} Log Out
+    %p
+      %a{:href => new_nom_path} New Nom
   - else
     %p
       %a{:href => new_user_session_path} Sign In
