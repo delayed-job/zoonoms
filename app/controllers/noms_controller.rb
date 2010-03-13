@@ -1,15 +1,4 @@
 class NomsController < ApplicationController
-  # GET /noms
-  # GET /noms.xml
-  def index
-    @noms = Nom.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @noms }
-    end
-  end
-
   # GET /noms/1
   # GET /noms/1.xml
   def show
