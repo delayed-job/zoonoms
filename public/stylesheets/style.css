@@ -16,4 +16,7 @@ a:hover {
   color: #FF8103;
   text-decoration: underline;
 }
+.clear.break {
+  height: 30px;
+}
 
