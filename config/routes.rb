@@ -7,6 +7,9 @@ Zoonoms::Application.routes.draw do |map|
 
   root :to => 'home#index'
 
+  match 'user/:id' => 'users#show', :as => 'user_page_via_id', :constraints => { :id => /\d+/ }
+  match 'user/:username' => 'users#show', :as => 'user_page_via_username'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
