@@ -1,9 +1,7 @@
-%p
-  Welcome Back 
-  =current_user.username
-%p
-  %a{:href => destroy_user_session_path} Log Out
-  |
-  %a{:href => new_nom_path} New Nom
+- content_for :top_bar do
+  = link_to 'Log Out', destroy_user_session_path
+
+= render 'noms/form'
+
 %h3 Recent Noms
 = render :partial => 'users/nom', :collection => @noms

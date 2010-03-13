@@ -21,11 +21,6 @@ class NomsController < ApplicationController
     end
   end
 
-  # GET /noms/1/edit
-  def edit
-    @nom = Nom.find(params[:id])
-  end
-
   # POST /noms
   # POST /noms.xml
   def create
@@ -39,22 +34,6 @@ class NomsController < ApplicationController
         format.xml  { render :xml => @nom, :status => :created, :location => @nom }
       else
         format.html { render :action => "new" }
-        format.xml  { render :xml => @nom.errors, :status => :unprocessable_entity }
-      end
-    end
-  end
-
-  # PUT /noms/1
-  # PUT /noms/1.xml
-  def update
-    @nom = Nom.find(params[:id])
-
-    respond_to do |format|
-      if @nom.update_attributes(params[:nom])
-        format.html { redirect_to(@nom, :notice => 'Nom was successfully updated.') }
-        format.xml  { head :ok }
-      else
-        format.html { render :action => "edit" }
         format.xml  { render :xml => @nom.errors, :status => :unprocessable_entity }
       end
     end

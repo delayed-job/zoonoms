@@ -1,7 +1,5 @@
-- form_for(@nom) do |f|
-  = f.error_messages
-  .field
-    = f.label :animal_id
-    = f.select :animal_id, Animal.all.collect {|a| [a.name, a.id] }
-  .actions
-    = f.submit
+- form_for @nom do |f|
+  %p
+    I nom'd on a
+    = f.select :animal_id, Animal.all.collect { |a| [ a.name, a.id] }
+  %p= f.submit 'Digest'
