@@ -7,12 +7,12 @@
     %th
     %th
 
-- @animals.each do |animal|
-  %tr
-    %td= animal.name
-    %td= link_to 'Show', animal
-    %td= link_to 'Edit', edit_animal_path(animal)
-    %td= link_to 'Destroy', animal, :confirm => 'Are you sure?', :method => :delete 
+  - @animals.each do |animal|
+    %tr
+      %td= animal.name
+      %td= link_to 'Show', animal
+      %td= link_to 'Edit', edit_animal_path(animal)
+      %td= link_to 'Destroy', animal, :confirm => 'Are you sure?', :method => :delete 
 
 %br
 
