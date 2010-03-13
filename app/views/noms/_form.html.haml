@@ -1,5 +1,5 @@
 - form_for @nom do |f|
   %p
-    I nom'd on a
+    I just nom'd on a
     = f.select :animal_id, Animal.all.collect { |a| [ a.name, a.id] }
-  %p= f.submit 'Digest'
+    = f.submit 'Digest'

@@ -1,7 +1,8 @@
 - content_for :top_bar do
   = link_to 'Log Out', destroy_user_session_path
 
-= render 'noms/form'
+.prefix_3.grid_6.suffix_3
+  = render 'noms/form'
 
-%h3 Recent Noms
-= render :partial => 'users/nom', :collection => @noms
+  %h3 Recent Noms
+  = render :partial => 'users/nom', :collection => @noms
