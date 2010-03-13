@@ -1,15 +1,4 @@
-%html
-  %h1 ZooNoms!
-  - if user_signed_in?
-    %p
-      Welcome Back 
-      =current_user.username
-    %p
-      %a{:href => destroy_user_session_path} Log Out
-    %p
-      %a{:href => new_nom_path} New Nom
-  - else
-    %p
-      %a{:href => new_user_session_path} Sign In
-      |
-      %a{:href => new_user_registration_path} Sign Up
+- if user_signed_in?
+  = render 'signed_in'
+- else
+  = render 'signed_out'
