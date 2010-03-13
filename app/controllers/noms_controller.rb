@@ -30,10 +30,10 @@ class NomsController < ApplicationController
 
     respond_to do |format|
       if @nom.save
-        format.html { redirect_to(@nom, :notice => 'Nom was successfully created.') }
+        format.html { redirect_to(root_path) }
         format.xml  { render :xml => @nom, :status => :created, :location => @nom }
       else
-        format.html { render :action => "new" }
+        format.html { render :controller => 'home', :action => "index" }
         format.xml  { render :xml => @nom.errors, :status => :unprocessable_entity }
       end
     end
