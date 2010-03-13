@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100312191701) do
+ActiveRecord::Schema.define(:version => 20100312235849) do
 
   create_table "animals", :force => true do |t|
     t.string   "name"
@@ -18,8 +18,6 @@ ActiveRecord::Schema.define(:version => 20100312191701) do
   end
 
   create_table "noms", :force => true do |t|
-    t.integer  "animal_id"
-    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -41,6 +39,7 @@ ActiveRecord::Schema.define(:version => 20100312191701) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "usernames"
   end
 
   add_index "users", ["confirmation_token"], :name => "index_users_on_confirmation_token", :unique => true
