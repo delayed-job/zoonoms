@@ -1,0 +1,14 @@
+!!!
+%html
+  %head
+    %title= yield :title
+    - %w{reset text 960 style}.each do |stylesheet|
+      = stylesheet_link_tag stylesheet
+    = csrf_meta_tag
+  %body
+    .container_12.container
+      = yield :top_bar
+      .prefix_3.grid_6.suffix_3
+        %h1.title ZooNoms
+        .box
+          = yield
