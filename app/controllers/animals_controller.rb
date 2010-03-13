@@ -1,4 +1,5 @@
 class AnimalsController < ApplicationController
+  before_filter :verify_user_is_admin
   # GET /animals
   # GET /animals.xml
   def index
@@ -78,6 +79,13 @@ class AnimalsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to(animals_url) }
       format.xml  { head :ok }
+    end
+  end
+  
+  private
+  def verify_user_is_admin
+    unless user_signed_in? and current_user.admin 
+      redirect_to root_path
     end
   end
 end
