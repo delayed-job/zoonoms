@@ -1,8 +1,6 @@
-%p
-  %span.prefix_1.grid_2
-    %a{:href => new_user_session_path} Sign In
-  %span.grid_2
-    %a{:href => new_user_registration_path} Sign Up
+%p.sign_in_or_up
+    %a.sign_in{:href => new_user_session_path} Sign In
+    %a.sign_up{:href => new_user_registration_path} Sign Up
 .break
 %h2 Recent Noms
 = render :partial => 'noms/full_nom', :collection => @recent_noms

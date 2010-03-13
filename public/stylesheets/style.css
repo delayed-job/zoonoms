@@ -5,7 +5,8 @@ body {
 }
 h1 {
   color: #611F0D;
-  font-size: 85px;
+  font-size: 80px;
+  text-align: center;
 }
 
 a {
@@ -16,7 +17,17 @@ a:hover {
   color: #FF8103;
   text-decoration: underline;
 }
-.break {
-  height: 30px;
+.box {
+  margin: 10px 0;
+  padding: 10px;
+  background: #fff;
+  border: #CCC 1px solid;
+  border-top: #EEE 1px solid;
+  border-left: #EEE 1px solid;
 }
-
+p.sign_in_or_up {
+  text-align:center;
+}
+  a.sign_in {
+    margin: 0 200px 0 0;
+  }
