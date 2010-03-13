@@ -3,7 +3,7 @@
   - if user_signed_in?
     %p
       Welcome Back 
-      =current_user.email
+      =current_user.username
     %p
       %a{:href => destroy_user_session_path} Log Out
   - else
