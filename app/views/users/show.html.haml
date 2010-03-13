@@ -1,1 +1,4 @@
-SUP DAWG, I'M A USER PAGE
+- content_for :title, "#{@user.username}'s ZooNoms"
+
+= render :partial => 'nom', :collection => @noms.all
+
