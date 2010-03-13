@@ -18,6 +18,8 @@ ActiveRecord::Schema.define(:version => 20100312235849) do
   end
 
   create_table "noms", :force => true do |t|
+    t.integer  "animal_id"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -39,7 +41,7 @@ ActiveRecord::Schema.define(:version => 20100312235849) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "usernames"
+    t.string   "username"
   end
 
   add_index "users", ["confirmation_token"], :name => "index_users_on_confirmation_token", :unique => true
