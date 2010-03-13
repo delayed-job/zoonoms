@@ -18,6 +18,7 @@ gem "rails", "3.0.0.beta"
 gem 'warden'
 gem 'devise', "1.1.pre"
 gem 'haml'
+
 group :development do
   gem 'ruby-debug'
   gem "sqlite3-ruby", :require => "sqlite3"
@@ -25,6 +26,7 @@ end
 
 group :production do
   gem 'pg'
+  gem 'thin'
 end
 
 ## Bundle gems used only in certain environments:
