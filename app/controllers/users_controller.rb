@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def show
-    @user = params[:id] ? User.find(params[:id]) : User.find(params[:username)
+    @user = params[:id] ? User.find(params[:id]) : User.find(params[:username])
     
     respond_to do |format|
       format.html
