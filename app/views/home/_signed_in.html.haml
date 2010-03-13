@@ -3,5 +3,7 @@
   =current_user.username
 %p
   %a{:href => destroy_user_session_path} Log Out
-%p
+  |
   %a{:href => new_nom_path} New Nom
+%h3 Recent Noms
+= render :partial => 'users/nom', :collection => @noms
